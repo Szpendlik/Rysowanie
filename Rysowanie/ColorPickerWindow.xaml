@@ -1,0 +1,52 @@
+﻿<Window x:Class="Rysowanie.ColorPickerWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Rysowanie"
+        mc:Ignorable="d"
+        Title="ColorPickerWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20*">
+                
+            </RowDefinition>
+            <RowDefinition Height="20*">
+
+            </RowDefinition>
+        </Grid.RowDefinitions>
+       <Label Content="Wybierz Kolor(model rgb):"  Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Top">
+            
+        </Label>
+        <Label Content ="Wpisz R:"  Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="40,0,0,140">
+        
+        </Label>
+        <TextBox x:Name="R" TextAlignment="Center" Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontSize="16" Width="40" Margin="120,0,0,140" TextChanged="R_TextChanged">
+
+        </TextBox>
+        <Label Content ="Wpisz G:"  Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="40,0,0,100">
+
+        </Label>
+        <TextBox x:Name="G" TextAlignment="Center"  Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontSize="16" Width="40" Margin="120,0,0,100" TextChanged="G_TextChanged">
+
+        </TextBox>
+        <Label Content ="Wpisz B:" Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="40,0,0,60">
+
+        </Label>
+        <TextBox x:Name="B" TextAlignment="Center" Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontSize="16" Width="40" Margin="120,0,0,60" TextChanged="B_TextChanged">
+
+        </TextBox>
+        <Button Content="Zatwierdź" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="60" Height="30" Click="Button_Click">
+
+        </Button>
+        <Label x:Name="Hue" Content="Hue: " Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,400,0">
+            
+        </Label>
+        <Label x:Name="Saturation" Content="Saturation: " Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,0">
+            
+        </Label>
+        <Label x:Name="Value" Content="Value: " Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="400,0,0,0">
+            
+        </Label>
+    </Grid>
+</Window>

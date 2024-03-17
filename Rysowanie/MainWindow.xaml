@@ -1,0 +1,63 @@
+﻿<Window x:Class="Rysowanko.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Rysowanko"
+        mc:Ignorable="d"
+        Title="Rysowanko" Height="675" Width="1200">
+    <Grid>
+        <Canvas x:Name="obszarRoboczy" MouseMove="obszarRoboczy_MouseMove" MouseDown="obszarRoboczy_MouseDown" Margin="0,0,0,68" MouseLeftButtonDown="obszarRoboczy_MouseLeftButtonDown">
+            <Canvas.Background>
+                <SolidColorBrush Color="White" Opacity="0"></SolidColorBrush>
+            </Canvas.Background>
+        </Canvas>
+        <TextBlock HorizontalAlignment="Left" Margin="1084,619,0,0" TextWrapping="Wrap" Text="Autor Bartosz Skura" VerticalAlignment="Top"/>
+        <ToolBarPanel Margin="0,-1,0,0">
+            <ToolBar>
+                <Button x:Name="przycisk" Content="O aplikacji" Click="przycisk_Click"></Button>
+                <Button x:Name="DrawBtn" Content="Rysuj dowolnie" Click="DrawBtn_Click"></Button>
+                <Button x:Name="DrawPoints" Content="Rysuj punkty" Click="DrawPoints_Click"></Button>
+
+                <Border BorderBrush="Black" BorderThickness="1"/>
+                <Menu>
+                    <MenuItem Header="Odcinki">
+                        <MenuItem x:Name ="DrawSegmentBtn" Header="Rysuj odcinek" Click="DrawSegmentBtn_Click">
+                        </MenuItem>
+                        <MenuItem x:Name ="EditSegmentBtn" Header="Edytuj odcinek" Click="Edit_Segment_Click">
+                        </MenuItem>
+                    </MenuItem>
+                </Menu>
+                <Menu>
+                    <MenuItem Header="Figury">
+                        <MenuItem x:Name="DrawPolygon" Header="Wielokąt" Click="DrawPolygon_Click">
+                        </MenuItem>
+                        <MenuItem x:Name="DrawSquare" Header="Kwadrat" Click="DrawSquare_Click">
+                        </MenuItem>
+                    </MenuItem>
+                </Menu>
+                <Menu>
+                    <MenuItem Header="Kształty">
+                        <MenuItem x:Name="DrawArrow" Header="Strzałka" Click="DrawArrow_Click">
+                        </MenuItem>
+                        <MenuItem x:Name="DrawPlus" Header="Plus" Click="DrawPlus_Click">
+                        </MenuItem>
+                    </MenuItem>
+                </Menu>
+                <Button x:Name="AddPictureButton" Content="Dodaj zdjęcie" Click="AddPictureButton_Click"></Button>
+                <Menu>
+                    <MenuItem Header="Zapisz jako:">
+                        <MenuItem x:Name="SavePaintAsPNG" Header="PNG" Click="SavePaintAsPNG_Click">
+                        </MenuItem>
+                        <MenuItem x:Name="SavePaintAsJPG" Header="JPG" Click="SavePaintAsJPG_Click">
+                        </MenuItem>
+                    </MenuItem>
+                </Menu>
+                <Button x:Name="Eraser" Content="Gumka" Click="Eraser_Click"></Button>
+                <Rectangle Name="ColorPicker" Width="20" Height="20" Fill="White" Margin="2" MouseLeftButtonDown="ColorPicker_MouseLeftButtonDown" />
+            </ToolBar>
+
+        </ToolBarPanel>
+
+    </Grid>
+</Window>
